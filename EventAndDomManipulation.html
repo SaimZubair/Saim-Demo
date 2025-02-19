@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events and DOM Manipulation</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+        .button {
+            background-color: orange;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+        #sideDiv {
+            display: none;
+            width: 200px;
+            height: 100px;
+            background-color: lightgray;
+            margin-top: 10px;
+        }
+        #image {
+            width: 500px;
+            display: block;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Events and DOM Manipulation (Activity)</h2>
+    <table>
+        <tr>
+            <td>Click</td>
+            <td>Double Click</td>
+            <td>Event Name</td>
+            <td>Event Name</td>
+        </tr>
+        <tr>
+            <td><button class="button" onclick="changeHeading()">Change Heading Text</button></td>
+            <td><button class="button" ondblclick="changeBgColor()">Change BG color of para</button></td>
+            <td><button class="button" onclick="addBorder()">Add borders on image</button></td>
+            <td><button class="button" onclick="toggleSideDiv()">Show/Hide side div</button></td>
+        </tr>
+    </table>
+    <h3 id="heading">This is the original heading</h3>
+    <p id="paragraph">an item of soft sweet food made from a mixture of flour, fat, eggs, sugar, and other ingredients, baked and sometimes iced or decorated....</p>
+    <div id="sideDiv">This is a side div</div>
+    <img id="image" src="https://handletheheat.com/wp-content/uploads/2015/03/Best-Birthday-Cake-with-milk-chocolate-buttercream-SQUARE.jpg" alt="Cake Image">
+
+    <script>
+        function changeHeading() {
+            document.getElementById("heading").innerText = "This is new Heading";
+        }
+        function changeBgColor() {
+            document.getElementById("paragraph").style.backgroundColor = "yellow";
+        }
+        function addBorder() {
+            document.getElementById("image").style.border = "5px solid black";
+        }
+        function toggleSideDiv() {
+            let sideDiv = document.getElementById("sideDiv");
+            if (sideDiv.style.display === "none") {
+                sideDiv.style.display = "block";
+            } else {
+                sideDiv.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
+Index.html
+Displaying Index.html. 
+Class Work Assignment (Event and DOM Manipulation)
+Yasir Khan
+•
+Feb 10
+100 points
+
+Activity events and DOM.docx
+Microsoft Word
+Class comments
